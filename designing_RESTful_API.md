@@ -1,12 +1,12 @@
-RESTful API 설계해보기
-==============================================================================
+# RESTful API 설계해보기
+
 목차
 1. 요구사항 정리
 2. 데이터구조 설계
 3. API 설계
 
-1.요구사항 정리
------------------------------------------------------------------------
+## 1.요구사항 정리
+
 현재 우리 서비스를 간단하게 요구사항 정리해보기 (텍스트로) <br>
 -> 우리가 무엇을 하려는지 아직 잘 모르겠다면 물어보기! (슬랙이든, 깃헙이든 뭐든!)
 
@@ -105,8 +105,8 @@ RESTful API 설계해보기
 
 <br><br>
 
-2.데이터구조 설계
------------------------------------------------------------------------
+## 2.데이터구조 설계
+
 요구사항에 따른 필요한 데이터를 간단하게 설계해보기 (json / python dictionary 어떤거든 상관없음)
 
 ```python
@@ -145,17 +145,49 @@ data = {"users":users, "events":events}
 
 
 
-3.API 설계
------------------------------------------------------------------------
-API 구조를 간단하게 만들어보기
-e.g
+## 3.API 설계
 
-POST /api/events
-GET /api/events/{event_id}
-PUT /api/events/{event_id}
-DELETE /api/events/{event_id}
+API 구조를 간단하게 만들어보기<br>
 
-POST /api/users
-GET /api/users/{user_id}
+    e.g
+
+    POST /api/events<br>
+    GET /api/events/{event_id}<br>
+    PUT /api/events/{event_id}<br>
+    DELETE /api/events/{event_id}<br>
+
+    POST /api/users<br>
+    GET /api/users/{user_id}
 
 등등. 디테일하게 할 필요는 없고 어떤 느낌으로 되어야 할지 고민
+
+    # EVENT
+    {
+	    "title": "",
+	    "description": "",
+	    "owner": "",
+	    "missions": [
+		    {
+			    "title": "",
+			    "type": "kakao",
+			    "url": "",
+			    "point": ""
+		    },
+		    {
+			    "title": "",
+			    "type": "instagram",
+			    "url": "",
+			    "point": ""
+		    },
+	    ],
+
+	    "startedAt": "",
+	    "endedAt": "",
+	    "reward": "Airpod"
+    }
+우선은 위와 같은 형태의 event 데이터를 설계했다고 가정하고 <br>
+POST / GET / PUT / DELTE 등의 HTTP Method 를 이용해서 <br>
+데이터를 생성/조회/업데이트/제거 하는 코드를 flask를 이용해서 작성해보고, <br>
+이 때 생성, 조회하는 데이터는 데이터베이스와 연결하지 말고, 파이썬 내에 임시로 저장 (dictionary 형태로)해서 사용해보기<br>
++텍스트파일로 저장하고 사용해보기<br>
+++DynamoDB 연결해서 사용해보기 

@@ -1,0 +1,21 @@
+# Compiled Python files
+API_practice/__pycache__/
+fastAPI_test/__pycache__/
+__pycache__/
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment 파이썬 가상환경설정
+# venv/
+
+# IDE files
+# .idea/
+
+# macOS 맥 폴더 내부의 파일 및 폴더 배치, 설정
+# .DS_Store
+
+# Environment variables 환경변수(비밀정보, 로컬설정 저장)
+# .env
