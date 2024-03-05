@@ -5,17 +5,15 @@
 
 ### 공부한것 정리, 기록
 
-* about_HTTP.md :
-    * HTTP란 무엇인가?, HTTP method, status code
-* about_AWS.md :
-    * AWS란 무엇인가?, 어떤 서비스가 있고 어떻게 사용하는가
-* DynamoDB.md :
-    * DynamoDB 개념, 사용법 정리
-* DynamoDB_test.py :
-    * DynamoDB 테이블 생성 및 연결, 모델 정의, 간단 crud
-* RESTful_API_and_Flask :
-    * RESTful API란 무엇인가?
-    * Flask와 API
-    * Swagger
-* designing_RESTful_API :
-    * RESTful API를 설계해보기
+개발을 공부하면서 기록하지 않으니 머릿속에서 점점 희미해진다.
+
+공부한 내용을 기록하니 다음에 찾아보기 쉬운 이점은 둘째치고 더 강하게 기억에 남아서 찾아보지 않게 되는 효과를 발견했다.
+
+### 레포지토리
+
+project- 로 시작하는 폴더엔 해당 프로젝트를 진행하며 수행한 작업과 트러블슈팅을 기록한다.
+
+나머지는 기술조사, 사용법에 관련된 내용을 기록한다.(추후 디렉토리화 필요)
+
+
+
